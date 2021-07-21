@@ -1,0 +1,14 @@
+.saveBtn{
+    display: block;
+    padding: 7px;
+    background: #E88F4B;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+
+.saveBtn:hover{
+    cursor: pointer;
+  }
+

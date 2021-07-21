@@ -1,0 +1,9 @@
+.tableHeader{
+    background: #E88F4B;
+    color: #fff;
+  }
+  
+  .tableHeader th {
+    padding: 20px;
+    
+  }

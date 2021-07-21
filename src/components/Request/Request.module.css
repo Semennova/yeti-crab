@@ -1,0 +1,18 @@
+.editBtn{
+    color: #fff;
+    border-radius: 50%;
+    background: #E88F4B;
+    font-size: .8em;
+    border: none;
+    padding: 5px
+  }
+  .deleteBtn{
+    background: #C9001A;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+  }
+  
+  .deleteBtn, .editBtn:hover{
+    cursor: pointer;
+  }

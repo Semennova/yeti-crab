@@ -1,0 +1,11 @@
+.table{
+    font-size: 14px;
+    border-spacing: 0;
+    text-align: center;
+    }
+    
+    .tableBody td{
+      border: 1px #ccc solid;
+      padding: 10px
+    }
+    
