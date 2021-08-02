@@ -6,6 +6,7 @@ export const Request = ({request, requests, setRequests, editRequest}) => {
     const deleteRequest = (number) => {
         setRequests(requests.filter(request => request.number !== number))
       }
+      
     return (
         <>
         <td>{request.number}</td>

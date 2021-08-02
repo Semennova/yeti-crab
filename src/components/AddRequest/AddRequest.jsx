@@ -1,24 +1,17 @@
 import React, { useState } from 'react';
 import style from './AddRequest.module.css'
 
-export const AddRequest = ({requests, setRequests}) => {
+export const AddRequest = ({requests, setRequests, request, setRequest}) => {
 
-    const [request, setRequest] = useState({
-        number: '',
-        date: '',
-        carrier: '',
-        name: '',
-        telephone: '',
-        email: '',
-        site: '',
-        comment: ''
-       
-      });
- 
+
       const [loading, setLoading] = useState(false);
       const [message, setMessage] = useState(false);
       const [telError, setTelError] = useState(false);
       const [emailError, setEmailError] = useState(false);
+
+      const errStyle ={
+        border: 'red 3px solid'
+      }
       
       const onChange = (e) => {
         setRequest({
@@ -81,9 +74,9 @@ export const AddRequest = ({requests, setRequests}) => {
 
             <input name='name' type='text' placeholder='* Контактное лицо' value={request.name} onChange={onChange}/>
 
-            <input name='telephone' type='tel' placeholder='* 8хх-ххх-ххххх' value={request.telephone} onChange={onChange}/>
+            {telError ? <input name='telephone' type='tel' placeholder='* 8хх-ххх-ххххх' value={request.telephone} onChange={onChange} style={errStyle}/> : <input name='telephone' type='tel' placeholder='* 8хх-ххх-ххххх' value={request.telephone} onChange={onChange}/>}
 
-            <input name='email' type='text' placeholder='* Email' value={request.email} onChange={onChange}/>
+            {emailError ? <input name='email' type='text' placeholder='* Email' value={request.email} onChange={onChange} style={errStyle}/> : <input name='email' type='text' placeholder='* Email' value={request.email} onChange={onChange} />}
 
             <input name='site' type='text' placeholder='Сайт' value={request.site} onChange={onChange} />
 
